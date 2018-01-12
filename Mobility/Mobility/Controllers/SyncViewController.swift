@@ -1,11 +1,25 @@
 import UIKit
 
+
+//Life cycle function
 class SyncViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    /**
+   Syncs and refresh the data
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
+
+    
+    
     // MARK: Actions
     @IBAction func syncButton(_ sender: UIButton) {
         SessionService.sync(success: {() -> Void in

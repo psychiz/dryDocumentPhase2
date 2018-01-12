@@ -57,6 +57,15 @@ class UserProfileTableViewController: UITableViewController {
     }
 
     //REFRESH TECHNICAL DATA
+    
+    /**
+     sync up the new data
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     private func refreshTechnicianData() {
         self.fetcher.fetchRemoteTechnician {result in
    
@@ -86,7 +95,17 @@ extension UserProfileTableViewController {
         }
     }
     
-// SEGUE FUNCTIONALITY 
+// SEGUE FUNCTIONALITY
+    
+    
+    /**
+    Navigates to the view controller
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     @IBAction func unwindWithSelectedDataSource(segue: UIStoryboardSegue) {
         let dataSourceViewController = segue.source as? DataSourceViewController
         let selectedDataSource = dataSourceViewController?.selectedDataSource

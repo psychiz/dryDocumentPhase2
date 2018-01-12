@@ -25,6 +25,16 @@ class TourDetailTableViewController: UITableViewController {
         loadViewData()
     }
     
+    
+    /**
+    Loads up the data 
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
+    
     private func loadViewData() {
         //self.tour = self.fetcher.loadTourById(self.tour.stationid)
         

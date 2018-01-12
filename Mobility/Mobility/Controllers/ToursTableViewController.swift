@@ -19,6 +19,15 @@ class ToursTableViewController: UIViewController,UITableViewDataSource,UITableVi
      }
     
     //Download all tours and detail of the tours
+    
+    /**
+  Download all tours and detail of the tours
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     @IBAction func downloadAllTours(_ sender: Any)
     {
     
@@ -31,6 +40,17 @@ class ToursTableViewController: UIViewController,UITableViewDataSource,UITableVi
     // MARK: Actions
     
     //Download tours
+    
+    
+    /**
+Refresh
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
     @IBAction func refreshView(_ sender: UIRefreshControl) {
         loadViewData()
     }
@@ -66,6 +86,18 @@ class ToursTableViewController: UIViewController,UITableViewDataSource,UITableVi
     {
         return tours.count
     }
+    
+    
+    
+    
+    /**
+     Download all tours and detail of the tours
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

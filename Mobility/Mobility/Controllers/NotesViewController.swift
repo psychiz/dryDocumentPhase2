@@ -25,6 +25,16 @@ class NotesViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
+/**
+ Populates up the notes
+ 
+ - Returns:nil
+ 
+ - Remark:
+ 
+ */
+
+
 extension NotesViewController:  UITableViewDataSource,UITableViewDelegate
  {
     

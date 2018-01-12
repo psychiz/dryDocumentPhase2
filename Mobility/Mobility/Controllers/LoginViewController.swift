@@ -89,6 +89,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
         return true
     }
     
+    /**
+   textFieldDidEndEditing
+     
+       - Returns:nil
+     
+     - Remark:
+    Changes the login button color and set the user interaction
+     - SeeAlso:
+     
+     */
+    
+    
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         print("TextField should begin editing method called")
         return true;
@@ -112,7 +124,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
     }
 
     
+    
     // MARK: Actions
+    /**
+     handleLoginAttempt
+     
+     - Returns:nil
+     
+     - Remark:
+    Authenticates user to the app and navigates to the next view controller
+     - SeeAlso:
+     
+     */
+    
+    
     @IBAction func handleLoginAttempt(_ sender: Any)
     {
         
@@ -163,6 +188,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
     
  
     // MARK: Navigation
+    
+    
+    /**
+     Segue
+     
+     - Returns:nil
+     
+     - Remark:
+   navigates to the next view controller
+     - SeeAlso:
+     
+     */
+    
+    
+    
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let wasLoginSuccessful = sender as? Bool, identifier == LoginConstants.LoginSeque {
             
@@ -220,6 +260,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 
 // MARK: EXTENSIONS TABLEVIEW 
 
+/**
+ Populates the data sources
+ 
+ - Returns:nil
+ 
+ - Remark:
+  Populates the data sources and on selection changes the data source
+ - SeeAlso:
+ 
+ */
+
+
+
+
 extension LoginViewController: UITableViewDataSource,UITableViewDelegate
 {
     @IBAction func unwindToLoginViewController(_ segue: UIStoryboardSegue)
@@ -231,6 +285,18 @@ extension LoginViewController: UITableViewDataSource,UITableViewDelegate
     {
         return dataSources.count
     }
+    
+    /**
+     Populates the data sources
+     
+     - Returns:nil
+     
+     - Remark:
+     Populates the data sources and on selection changes the data source
+     - SeeAlso:
+     
+     */
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DataSourceCell", for: indexPath)

@@ -14,6 +14,18 @@ class MobilityReportsViewController: UIViewController,UITableViewDelegate,UITabl
         return 4
     }
     
+    /**
+   Populates up the reports 
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
+
+    
+    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reportCell", for: indexPath) as! ReportsTableViewCell
         cell.reportHeading.text = "Report Ipsum"
@@ -22,7 +34,7 @@ class MobilityReportsViewController: UIViewController,UITableViewDelegate,UITabl
         return cell //4.
     }
     
-
+//Life cycle 
     override func viewDidLoad() {
         super.viewDidLoad()
         mobilityReportsTable.delegate = self

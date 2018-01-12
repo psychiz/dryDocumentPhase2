@@ -48,6 +48,18 @@ class StationDetailViewController: UIViewController,UITableViewDataSource,UITabl
         evaluate()
     }
 
+    /**
+     Navigates to the SaveStationDetail
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
+
+    
+    
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -58,6 +70,17 @@ class StationDetailViewController: UIViewController,UITableViewDataSource,UITabl
     }
     
     // MARK: Private methods
+    
+    /**
+    Formulae for the station detail
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
+    
+
     
     private func evaluate() {
         let rawExpression = stationReading!.station!.formula

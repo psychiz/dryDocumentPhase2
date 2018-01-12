@@ -13,6 +13,19 @@ class ControlRoomListViewController: UIViewController {
     
     private var fetcher: Fetcher = ((UIApplication.shared.delegate as? AppDelegate)?.fetcher)!
     
+    /**
+     Populates the Control room list
+     
+     - Returns:nil
+     
+     - Remark:
+     Populates the data sources and on selection changes the data source
+     - SeeAlso:
+     
+     */
+
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,7 +43,17 @@ class ControlRoomListViewController: UIViewController {
         
     }
     
-    
+    /**
+    Refreshes the technician data
+     
+     - Returns:nil
+     
+     - Remark:
+     Populates the data sources and on selection changes the data source
+     - SeeAlso:
+     
+     */
+
     
     
     private func refreshTechnicianData() {
@@ -53,6 +76,18 @@ class ControlRoomListViewController: UIViewController {
     }
 
 
+
+    
+    /**
+     Control room selection
+     
+     - Returns:nil
+     
+     - Remark:
+     Populates the data sources and on selection changes the data source
+     - SeeAlso:
+     
+     */
 
     @IBAction func submitControlRoomSelection(_ sender: Any) {
    
@@ -85,6 +120,18 @@ class ControlRoomListViewController: UIViewController {
     
     
 }
+
+/**
+Control room list 
+ 
+ - Returns:nil
+ 
+ - Remark:
+ Populates the data sources and on selection changes the data source
+ - SeeAlso:
+ 
+ */
+
 
 
 extension ControlRoomListViewController: UITableViewDelegate,UITableViewDataSource {

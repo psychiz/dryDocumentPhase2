@@ -14,6 +14,9 @@ class StationsTableViewController: UITableViewController {
     }
 
     // MARK: - Navigation
+
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
@@ -62,7 +65,16 @@ class StationsTableViewController: UITableViewController {
         // placeholder, do nothing
     }
     
-    //SAVE STATION DETAIL
+    
+    
+    /**
+     SAVE STATION DETAIL
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     @IBAction func saveStationDetail(_ segue: UIStoryboardSegue) {
         guard let stationViewController = segue.source as? StationDetailViewController,
             let stationReading = stationViewController.stationReading else {
@@ -78,6 +90,17 @@ class StationsTableViewController: UITableViewController {
     // MARK: Private Methods
 
     //LOAD TOURS
+    
+    
+    
+    /**
+     Download all tours
+     
+     - Returns:nil
+     
+     - Remark:
+     
+     */
     private func loadTour() {
         // note: convert stations to Core Data, REST API based.
         let photo1 = UIImage(named: "station1")
@@ -103,6 +126,17 @@ class StationsTableViewController: UITableViewController {
 }
 
 // MARK: - Table View Extension
+
+
+/**
+Sync up the station list
+ 
+ - Returns:nil
+ 
+ - Remark:
+ 
+ */
+
 extension StationsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stationReadings.count
